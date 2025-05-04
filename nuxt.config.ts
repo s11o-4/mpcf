@@ -8,9 +8,10 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    apiSecret: '12345',
+    apiSecret: process.env.API_URL || '',
+
     public: {
-      API_URL: 'http://localhost:4000/api'
+      API_URL: 'http://mpcb/api'
     }
   },
 

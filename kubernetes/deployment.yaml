@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mpcf
+  namespace: mpcf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mpcf
+  template:
+    metadata:
+      labels:
+        app: mpcf
+    spec:
+      containers:
+        - name: mpcf
+          image: s11o/mpcf:0.0.1
+          ports:
+            - containerPort: 80

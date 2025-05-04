@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mpcf-config
+  namespace: mpcf
+data:
+  API_URL: http://mpcb/api
